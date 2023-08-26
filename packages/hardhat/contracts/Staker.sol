@@ -8,6 +8,9 @@ contract Staker {
 
   ExampleExternalContract public exampleExternalContract;
 
+  mapping ( address => uint256 ) public balances;
+  uint256 public constant threshold = 1 ether;
+
   constructor(address exampleExternalContractAddress) {
       exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
   }
